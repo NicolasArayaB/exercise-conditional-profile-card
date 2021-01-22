@@ -30,9 +30,9 @@ function render(variables = {}) {
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
 
   let name = variables.name;
-  if (name == null) name = "Lucy";
+  if (name == null) name = "Marilyn";
   let lastname = variables.lastname;
-  if (lastname == null) lastname = "Boilett";
+  if (lastname == null) lastname = "Manson";
 
   let twitter = variables.twitter;
   if (twitter == null) twitter = "alesanchezr";
@@ -79,9 +79,11 @@ window.onload = function() {
     // if includeCover is true the algorithm should
     includeCover: true,
     // this is the url of the image that will used as background for the profile cover
-    background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da",
+    background:
+      "https://upload.wikimedia.org/wikipedia/commons/1/1c/Marilyn_Manson_2012.jpg",
     // this is the url for the profile avatar
-    avatarURL: "https://randomuser.me/api/portraits/women/42.jpg",
+    avatarURL:
+      "https://www.mondosonoro.com/wp-content/uploads/2020/03/manson.jpg",
     // social media bar position (left or right)
     socialMediaPosition: "position-left",
     // social media usernames
