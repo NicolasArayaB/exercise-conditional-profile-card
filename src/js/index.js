@@ -29,18 +29,43 @@ function render(variables = {}) {
   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
 
+  let name = variables.name;
+  if (name == null) name = "Lucy";
+  let lastname = variables.lastname;
+  if (lastname == null) lastname = "Boilett";
+
+  let twitter = variables.twitter;
+  if (twitter == null) twitter = "alesanchezr";
+
+  let github = variables.github;
+  if (github == null) github = "alesanchezr";
+
+  let linkedin = variables.linkedin;
+  if (linkedin == null) linkedin = "alesanchezr";
+
+  let instagram = variables.instagram;
+  if (instagram == null) instagram = "alesanchezr";
+
+  let role = variables.role;
+  if (role == null) role = "Web Developer";
+
+  let country = variables.country;
+  let city = variables.city;
+  if (country == null) country = "USA";
+  if (city == null) city = "Miami";
+
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
-          <h2>Web Developer</h2>
-          <h3>Miami, USA</h3>
-          <ul class="position-right">
-            <li><a href="https://twitter.com/alesanchezr"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://github.com/alesanchezr"><i class="fa fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/alesanchezr"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/alesanchezr"><i class="fa fa-instagram"></i></a></li>
+          <h1 class="name">${name} ${lastname}</h1>
+          <h2>${role}</h2>
+          <h3>"${city}, ${country}</h3>
+          <ul class=${variables.socialMediaPosition}>
+            <li><a href="https://twitter.com/${twitter}"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://github.com/${github}"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://linkedin.com/${linkedin}"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/${instagram}"><i class="fa fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
